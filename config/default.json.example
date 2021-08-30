@@ -1,0 +1,32 @@
+// DON'T TOUCH THIS FILE. PLEASE FOLLOW THE INSTRUCTIONS:
+//  - COPY THIS FILE AS default.json ON THE SAME DIRECTORY
+//  - SET VALUES DEPENDING ON CURRENT ENVIRONMENT.
+//  - MAKE SURE OF CREATE THE DATABASE & SET VARIABLES.
+{
+    "app": {
+        "name": "Stana (API)",
+        "url": "http://127.0.0.1:3000",
+        "port": 3000,
+        "env": "development",
+        "debug": true
+    },
+    "db": {
+        "host": "127.0.0.1",
+        "port": 3306,
+        "name": null,
+        "user": null,
+        "password": null
+    },
+    "mail": {
+        "mailer": null,
+        "host": null,
+        "port": null,
+        "username": null,
+        "password": null,
+        "encryptation": "tls",
+        "fromAddress": "no-reply@stana.com",
+        "fromName": "Stana",
+        "domain": null,
+        "secret": null
+    }
+}
