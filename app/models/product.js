@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Product.init({
     uuid: DataTypes.STRING,
+    barCode: DataTypes.STRING,
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     price: DataTypes.DECIMAL,

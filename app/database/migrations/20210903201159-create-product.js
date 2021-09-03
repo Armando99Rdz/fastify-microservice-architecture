@@ -13,6 +13,11 @@ module.exports = {
         allowNull: false,
         unique: true
       },
+      barCode: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
+      },
       name: {
         type: Sequelize.STRING,
         allowNull: false,
