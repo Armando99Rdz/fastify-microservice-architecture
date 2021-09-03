@@ -9,7 +9,7 @@ API Rest using fastify for point of sale system.
 
 #### <strong>on dev tricks</strong>
 install `sequelize-cli` as global package:
-- `npm -g sequelize-cli` <br>
+- `npm i -g sequelize-cli` <br>
 
 set an alias, for example:
 - `alias seq-cli='sequelize-cli'`

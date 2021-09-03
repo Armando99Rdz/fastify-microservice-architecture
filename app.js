@@ -2,6 +2,7 @@
 
 const path = require('path')
 const AutoLoad = require('fastify-autoload')
+const config = require('./app/config/app')
 
 module.exports = async function (fastify, opts) {
   
