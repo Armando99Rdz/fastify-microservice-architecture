@@ -8,16 +8,9 @@ const dropTables = async () => {
     
     try {
         if (env.get('app.env') === 'production')
-            throw 'Cannot drop tables on production environment.'
+            throw 'Cannot execute this command on production.'
 
-        // DATABASE CONNECTION
-        const db = dbConnection(app)
-
-        await db.sync()
-        app.log.info('DB connection established.')
-        
-        await db.drop();
-        app.log.info('All tables has been deleted.')
+        app.log.info('Example command execute successfully.')
 
         process.exit(0)
 

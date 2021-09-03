@@ -27,8 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     featuredLevel: DataTypes.INTEGER,
   }, {
     sequelize,
-    modelName: 'Product',
-    tableName: 'products',
+    modelName: 'products',
     timestamps: true,
     hooks: {
       beforeValidate: (model, options) => {

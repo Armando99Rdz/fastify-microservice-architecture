@@ -22,8 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     imageUrl: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'User',
-    tableName: 'users',
+    modelName: 'users',
     timestamps: true,
     hooks: {
       beforeValidate: (model, opts) => {
