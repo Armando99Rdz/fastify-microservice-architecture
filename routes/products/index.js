@@ -1,7 +1,8 @@
 'use strict'
 
 const {
-  allController, showByUuidController,
+  allController, showByUuidController, updateController,
+  storeController, deleteController,
 } = require('./controller')
 
 module.exports = async function (fastify, opts) {
@@ -9,6 +10,11 @@ module.exports = async function (fastify, opts) {
   // GET ALL
   fastify.get('/', allController)
   // GET BY UUID
-  fastify.get('/show/:uuid', showByUuidController)
-
+  fastify.get('/:uuid', showByUuidController)
+  // CREATE
+  fastify.post('/', storeController)
+  // UPDATE
+  fastify.put('/:uuid', updateController)
+  // DELETE
+  fastify.delete('/:uuid', deleteController)
 }

@@ -1,0 +1,34 @@
+### TESTING PRODUCT ENDPOINTS
+
+
+### GET ALL
+GET http://127.0.0.1:3000/products
+
+
+### GET BY UUID
+GET http://127.0.0.1:3000/products/15332c15-2721-4e48-87e4-f05e71139bcf
+
+
+### CREATE
+POST http://127.0.0.1:3000/products/
+Content-Type: application/json
+
+{
+    "name": "iMac M1 Green",
+    "price": 28590.10,
+    "stock": 10
+}
+
+
+### UPDATE
+PUT http://127.0.0.1:3000/products/fc1f4568-f3db-40ff-9306-af3362c64617
+Content-Type: application/json
+
+{
+    "discount": 15.0,
+    "discountType": "%"
+}
+
+
+### DELETE
+DELETE  http://127.0.0.1:3000/products/15332c15-2721-4e48-87e4-f05e71139bcf
