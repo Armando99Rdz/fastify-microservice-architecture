@@ -1,4 +1,3 @@
-const config = require('../../app/config/app')
 const Sequelize = require('sequelize')
 const dbConnection = require('../../app/lib/dbConnection')
 const db = dbConnection(require('fastify')({ logger: true }))

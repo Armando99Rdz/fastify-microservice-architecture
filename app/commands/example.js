@@ -1,4 +1,7 @@
-// DROP ALL TABLES FROM DATABASE
+// ----------------------------------------------------------
+// USE THIS COMMAND AS EXAMPLE
+// ----------------------------------------------------------
+
 const app = require('fastify')({ logger: true })
 const env = require('config')
 const dbConnection = require('../lib/dbConnection')

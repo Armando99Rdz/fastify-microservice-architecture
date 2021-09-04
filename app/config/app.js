@@ -10,6 +10,9 @@ module.exports = {
     // App URL
     appUrl: env.get('app.name') || '',
 
+    // Secret Key
+    secretKey: env.get('app.secretKey'),
+
     // Project Folder Absolute Path
     projectPath: path.join(__dirname, '/../../'),
 

@@ -5,7 +5,7 @@ This's a very simple initial scaffold to build Fastify APIs following the micros
 
 - The `app/` folder contains the core code of the application without consider the controller logic (located on the  `routes/` folder). Inside this you can found the following directories:
     - `commands/`. Contains your custom scripts that will called from the package.json.
-    - `config/`. Contains config values of global access typically using the environment variables.
+    - `config/`. Contains config values of global access. This files typically uses the environment variables. 
     - `database/`. Contains the migrations & seeders.
     - `lib/`. Directory to place reusable code w/ certain business logic.
     - `models`. Contains the ORM sequelize models.
@@ -26,11 +26,11 @@ This's a very simple initial scaffold to build Fastify APIs following the micros
 ## Project Setup
 - `npm i`
 - read `config/default.json.example` file & follow the instructions.
+- `npm run app:key` secret key to sign JWT. 
 
 ### (optional) run demo seeders
 - run migrations `npx sequelize-cli db:migrate`
 - run seeders `npx sequelize-cli db:seed:all `
-
 
 ## API docs
 Swagger has already been integrated to this project. You can found the api documentation on `/docs` route. 

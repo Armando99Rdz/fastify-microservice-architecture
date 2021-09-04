@@ -8,7 +8,11 @@ const {
 module.exports = async function (fastify, opts) {
 
   // GET ALL
-  fastify.get('/', allController)
+  fastify.get(
+    '/',
+    { preValidation: [fastify.authenticate] },
+    allController
+  )
   // GET BY UUID
   fastify.get('/:uuid', showByUuidController)
   // CREATE
