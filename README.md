@@ -49,7 +49,8 @@ Here's a rough roadmap of things to do:
 - [x] Add a example custom command 
 - [x] Create some example models, migrations, seeders
 - [x] Create an app module (complete CRUD). 
-- [ ] Add JWT authentication 
+- [x] Add JWT authentication 
+  - [ ] signin and login
 
 ## License
 The MIT License (MIT)
