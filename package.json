@@ -1,7 +1,7 @@
 {
-  "name": "fastify-microservice-course",
+  "name": "fastify-microservice-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Fastify project structure",
   "main": "app.js",
   "directories": {
     "test": "test"
@@ -12,9 +12,17 @@
     "dev": "fastify start -w -l info -P app.js",
     "app:example": "node ./app/commands/example.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "API",
+    "Microservice",
+    "Fastify",
+    "MySQL",
+    "Node",
+    "Sequelize",
+    "Clean Architecture"
+  ],
+  "author": "Armando Rdz <rodriguezhernandezarmando7@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "config": "^3.3.6",
