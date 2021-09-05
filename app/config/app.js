@@ -5,10 +5,10 @@ const path = require('path')
 module.exports = {
 
     // App Name
-    appName: env.get('app.name') || '',
+    appName: env.get('app.name') || 'App Name',
 
-    // App URL
-    appUrl: env.get('app.name') || '',
+    // App URL (including port)
+    appUrl: `${env.get('app.url')}:${env.get('app.port')}/`,
 
     // Secret Key
     secretKey: env.get('app.secretKey'),

@@ -4,8 +4,8 @@
 //  - MAKE SURE OF CREATE THE DATABASE & SET VARIABLES.
 {
     "app": {
-        "name": "Stana (API)",
-        "url": "http://127.0.0.1:3000",
+        "name": "App Name",
+        "url": "http://localhost",
         "port": 3000,
         "env": "development",
         "debug": true,
@@ -25,8 +25,8 @@
         "username": null,
         "password": null,
         "encryptation": "tls",
-        "fromAddress": "no-reply@stana.com",
-        "fromName": "Stana",
+        "fromAddress": "no-reply@appname.com",
+        "fromName": "App Name",
         "domain": null,
         "secret": null
     }

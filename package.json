@@ -10,7 +10,6 @@
     "test": "tap \"test/**/*.test.js\"",
     "start": "fastify start -l info app.js",
     "dev": "fastify start -w -l info -P app.js",
-    
     "app:key": "node ./app/commands/genAppSecretKey.js"
   },
   "keywords": [
