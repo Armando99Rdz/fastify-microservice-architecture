@@ -11,16 +11,12 @@ This's a very simple initial scaffold to build Fastify APIs following the micros
     - `models`. Contains the ORM sequelize models.
     - `utils`. Some reusable function like passwords encryption.  
     <br>
-
 - The `config/` directory contains all enviroment config files including the sequelize config file.
 <br>
-
 - The `public/` folder houses your pubic files such as images or other free access assets.
 <br>
-
 - The `routes/` directory contains your appliction modules separated by folders for each service.
 <br>
-
 - The `tests/` directory contains your automated tests.
 
 ## Project Setup
