@@ -44,7 +44,8 @@ Here's a rough roadmap of things to do:
 - [x] Create some example models, migrations, seeders
 - [x] Create an app module (complete CRUD). 
 - [x] Add JWT authentication 
-  - [ ] signin and login
+  - [ ] signin and login (WIP)
+  - [ ] improve auth security (attempts limit, login history, etc.)
 
 ## License
 The MIT License (MIT)

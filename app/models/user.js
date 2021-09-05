@@ -1,3 +1,7 @@
+// ----------------------------------------------------------
+// Example Model 
+// ----------------------------------------------------------
+
 'use strict';
 const { Model } = require('sequelize');
 const { encrypt } = require('../utils/hash')

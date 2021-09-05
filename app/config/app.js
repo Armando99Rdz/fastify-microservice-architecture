@@ -1,4 +1,7 @@
-// GENERAL CONFIG VALUES
+// ----------------------------------------------------------
+// General Application's Config Values
+// ----------------------------------------------------------
+
 const env = require('config')
 const path = require('path')
 
@@ -7,7 +10,7 @@ module.exports = {
     // App Name
     appName: env.get('app.name') || 'App Name',
 
-    // App URL (including port)
+    // Full App URL (url:port)
     appUrl: `${env.get('app.url')}:${env.get('app.port')}/`,
 
     // Secret Key

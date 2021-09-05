@@ -12,4 +12,4 @@ Content-Type: application/json
 ### CURRENT USER LOGGED
 GET http://127.0.0.1:3000/auth/me
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoZWxsbyI6IndvcmxkIiwiaWF0IjoxNjMwNzMxOTg5LCJleHAiOjE2MzA3MzIwNDl9.H7vb444l_0hPyfPa8udjR1za5lIp_2StENykHxya9Ek
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoZWxsbyI6IndvcmxkIiwiaWF0IjoxNjMwODIwNTcwLCJleHAiOjE2MzA5MDY5NzB9.NDbzUCR2LZqAJRd5EQaT_8ETUJojbHLq-NwCbPJOn7Y

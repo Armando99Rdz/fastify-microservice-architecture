@@ -1,6 +1,6 @@
 // ----------------------------------------------------------
-// GENERATE THE SECRET KEY TO SIGN JWT.
-// SET THE VALUE ON config/default.json
+// Gnerate The Secret Key To Sign Auth JWTs.
+// This command writes the config/default.json file.
 // ----------------------------------------------------------
 const app = require('fastify')({ logger: true })
 const env = require('config')
@@ -26,7 +26,7 @@ const generateAppSecretKey = async () => {
         jsonData.app.secretKey = key
         fs.writeFileSync(jsonPath, JSON.stringify(jsonData, null, 4))
 
-        app.log.info('KEY (base256): ' + key)
+        app.log.info('KEY GENERATED (base256): ' + key)
         app.log.info('Secret key has been generated successfully.')
         process.exit(0)
 

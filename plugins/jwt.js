@@ -1,10 +1,13 @@
+// ----------------------------------------------------------
+// Authentication Plugin
+// ----------------------------------------------------------
 'use strict'
 
 const fp = require('fastify-plugin')
 const config = require('../app/config/app')
 
-// The authentication logic into this plugin
-// to protect only some of the roytes.
+// This plugin contains the authentication logic using
+// JWT to protect the routes & using the app secret key. 
 
 module.exports = fp(async function(fastify, opts) {
     fastify.register(require("fastify-jwt"), {
@@ -13,6 +16,7 @@ module.exports = fp(async function(fastify, opts) {
   
     fastify.decorate("authenticate", async function(request, reply) {
         try {
+            // Verify access token from the authorization headers
             await request.jwtVerify()
         } catch (err) {
             reply.send(err)

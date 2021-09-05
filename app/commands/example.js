@@ -4,12 +4,11 @@
 
 const app = require('fastify')({ logger: true })
 const env = require('config')
-const dbConnection = require('../lib/dbConnection')
 
 // command logic
 const dropTables = async () => {
-    
     try {
+
         if (env.get('app.env') === 'production')
             throw 'Cannot execute this command on production.'
 

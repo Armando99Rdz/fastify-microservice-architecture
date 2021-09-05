@@ -1,3 +1,7 @@
+// ----------------------------------------------------------
+// Sequelize ORM Config Values
+//    Uses the env variables (config/default.json file)
+// ----------------------------------------------------------
 const env = require('config')
 
 const sequelizeConfig = () => {

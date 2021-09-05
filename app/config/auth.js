@@ -1,4 +1,7 @@
-// AUTH CONFIG VALUES
+// ----------------------------------------------------------
+// Authentication Config Values
+// ----------------------------------------------------------
+
 const env = require('config')
 
 module.exports = {

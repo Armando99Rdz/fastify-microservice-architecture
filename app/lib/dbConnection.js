@@ -1,12 +1,15 @@
-// DATABASE CONNECTION
+// ----------------------------------------------------------
+// Database Connection Helper
+// ----------------------------------------------------------
+
 const Sequelize = require('sequelize')
 const config = require('../config/database')
 
 /**
- * receive the fastify app instance
+ * Receives the fastify instance
  * 
  * @param {fastify} app 
- * @returns 
+ * @returns sequelize instance
  */
 const connect = (app) => {
     return new Sequelize(

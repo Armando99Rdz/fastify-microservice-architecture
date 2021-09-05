@@ -1,4 +1,7 @@
-// DATABASE CONNECTION OPTIONS
+// ----------------------------------------------------------
+// Database Config Values
+// ----------------------------------------------------------
+
 const env = require('config')
 
 module.exports = {

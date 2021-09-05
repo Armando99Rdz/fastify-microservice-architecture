@@ -1,3 +1,8 @@
+// ----------------------------------------------------------
+// Hash Generator:
+//    Encrypt passwords, compare hash & raw string, etc.
+// ----------------------------------------------------------
+
 const bcrypt = require('bcrypt')
 
 const SALT_ROUNDS = 10; 
