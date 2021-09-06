@@ -1,9 +1,10 @@
 // ----------------------------------------------------------
 // USE THIS COMMAND AS EXAMPLE
 // ----------------------------------------------------------
-
-const app = require('fastify')({ logger: true })
 const env = require('config')
+const app = require('fastify')({ logger: {
+    prettyPrint: true
+}})
 
 // command logic
 const dropTables = async () => {

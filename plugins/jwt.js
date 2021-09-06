@@ -14,7 +14,7 @@ module.exports = fp(async function(fastify, opts) {
         secret: config.secretKey
     })
   
-    fastify.decorate("authenticate", async function(request, reply) {
+    fastify.decorate("auth", async function(request, reply) {
         try {
             // Verify access token from the authorization headers
             await request.jwtVerify()

@@ -17,8 +17,8 @@ module.exports = {
 
     operatorsAliases: false,
 
-    // allow console messages
-    // debug: env.get('db.debug'),
+    // allow console messages of queries
+    debug: false,
 
     // CONNECTION INFO
     host: env.get('db.host'),

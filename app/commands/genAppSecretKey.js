@@ -1,8 +1,10 @@
 // ----------------------------------------------------------
-// Gnerate The Secret Key To Sign Auth JWTs.
+// Generate The Secret Key To Sign Auth JWTs.
 // This command writes the config/default.json file.
 // ----------------------------------------------------------
-const app = require('fastify')({ logger: true })
+const app = require('fastify')({ logger: {
+    prettyPrint: true   
+}})
 const env = require('config')
 const config = require('../config/app')
 const fs = require('fs')

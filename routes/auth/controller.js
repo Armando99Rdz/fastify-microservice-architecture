@@ -1,41 +1,49 @@
-const config = require('../../app/config/app')
-const auth = require('../../app/config/auth')
-const authUser = require('../../app/lib/authUser')
-const Sequelize = require('sequelize')
-const dbConnection = require('../../app/lib/dbConnection')
-const db = dbConnection(require('fastify')({ logger: true }))
+const authConfig = require('../../app/config/auth')
+const Auth = require('../../app/lib/authUser')
 const User = require('../../app/models/user')
-
-const model = User(db, Sequelize.DataTypes); // Get model instance
-
+const instanceModel = require('../../app/lib/instanceModel')
 /**
  * Sign In / Log In
  * 
- * @param {object} req 
- * @param {object} reply 
+ * @param {object} fastify
  */
-exports.loginController = async (req, reply) => {
-    const { email, password } = req.body
-
-    const user = authUser.attempt({ email, password })
-    // const user = await model.findOne({ where: { email, password } })
+exports.loginController = function ({ jwt }) {
+    return async (req, reply) => {
+        const { email, password } = req.body
     
-    // const token = await reply.jwtSign(
-    //     user,
-    //     { expiresIn: auth.expiresIn }
-    // )
-    reply.send({
-        user,
-        // msgKey: 'loggedin'
-    })
+        const user = await Auth.attempt({ email, password })
+        
+        if (user) { // success login
+            const token = await jwt.sign(
+                user,
+                { expiresIn: authConfig.expiresIn }
+            )
+            reply.send({
+                accessToken: token,
+                msgKey: 'auth.success'
+            })
+        } else { // wrong credentials
+            reply 
+                .code(401)
+                .send({
+                    msgKey: 'auth.incorrect'
+                })
+        }
+    }
 }
 
 /**
  * Returns the logged user
  * 
- * @param {object} req 
- * @param {object} reply 
+ * @param {object} fastify
  */
-exports.meController = async (req, reply) => {
-    reply.send(req.user)
+exports.meController = function ({ db }) {
+    return async (req, reply) => {
+        const { id } = req.user
+
+        const model = instanceModel(User, db);
+        const user = await model.findOne({ where: { id } });
+
+        reply.send(user)
+    }
 }

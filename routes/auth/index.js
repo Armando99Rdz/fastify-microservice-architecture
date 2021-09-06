@@ -7,15 +7,15 @@ module.exports = async function (fastify, opts) {
   // SIGN IN
   fastify.post(
     '/signin',
-    loginController
+    loginController(fastify)
   )
   // SIGN UP
 
   // GET CURRENT USER LOGGED
   fastify.get(
     '/me',
-    { preValidation: [fastify.authenticate] },
-    meController
+    { preValidation: [fastify.auth] }, // protected route
+    meController(fastify)
   )
   // SHOW
 

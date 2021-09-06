@@ -20,7 +20,11 @@ const connect = (app) => {
             host: config.host,
             port: config.port,
             dialect: config.dialect,
-            logging: (msg) => app.log.info(msg),
+            logging: (msg) => {
+                if (config.debug) {
+                    return app.log.info(msg)
+                }
+            },
         }
     )
 }

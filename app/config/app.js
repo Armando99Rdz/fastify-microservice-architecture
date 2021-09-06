@@ -13,6 +13,8 @@ module.exports = {
     // Full App URL (url:port)
     appUrl: `${env.get('app.url')}:${env.get('app.port')}/`,
 
+    appDebug: env.get('app.debug') || false,
+
     // Secret Key
     secretKey: env.get('app.secretKey'),
 
@@ -27,5 +29,16 @@ module.exports = {
 
     // Tests Folder Absolute Path
     testPath: path.join(__dirname, '/../../tests'),
+
+    publicRoutePrefix: '/public', // empty is equals to '/'
+
+    // Expose Docs Route
+    exposeDocs: env.get('app.exposeDocs') || false,
+
+    // Docs route prefix
+    docsRoutePrefix: '/docs', 
+
+    // Docs Description
+    docsDescription: 'Documentation description',
 
 }
