@@ -6,12 +6,12 @@ This's a very simple initial scaffold to build Fastify APIs following the micros
 - The `app/` folder contains the core code of the application without consider the controller logic (located on the  `routes/` folder). Inside this you can found the following directories:
     - `commands/`. Contains your custom scripts that will called from the package.json.
     - `config/`. Contains config values of global access. This files typically uses the environment variables. 
-    - `database/`. Contains the migrations & seeders.
     - `lib/`. Directory to place reusable code w/ certain business logic.
     - `models`. Contains the ORM sequelize models.
     - `utils`. Some reusable function like passwords encryption.
 
 - The `config/` directory contains all enviroment config files including the sequelize config file (following AppConfig pattern).
+- `database/`. Contains the migrations & seeders.
 - The `public/` folder houses your pubic files such as images or other free access assets.
 - The `routes/` directory contains your appliction modules separated by folders for each service.
 - The `tests/` directory contains your automated tests.
