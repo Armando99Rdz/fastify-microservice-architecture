@@ -16,7 +16,7 @@ const generateAppSecretKey = async () => {
     try {
 
         if (env.get('app.secretKey')) { // validate if exists
-            app.log.info('Secret key has already been generated.')
+            app.log.warn('Secret key has already been generated.')
             process.exit(0) // exit
         }
 
@@ -33,7 +33,7 @@ const generateAppSecretKey = async () => {
         process.exit(0)
 
     } catch (error) {
-        app.log.warn(error)
+        app.log.error(error)
         process.exit(1) // exit
     }
 }

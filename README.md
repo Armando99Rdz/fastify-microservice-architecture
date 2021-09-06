@@ -42,11 +42,10 @@ Here's a rough roadmap of things to do:
 - [x] Add a example custom command 
 - [x] Create some example models, migrations, seeders
 - [x] Create an app module (complete CRUD). 
-- [x] Add JWT authentication 
+- [x] Pretty logger (using pino-pretty)
+- [ ] Add JWT authentication 
   - [ ] signin and login (WIP)
   - [ ] improve auth security (attempts limit, login history, etc.)
-- [ ] Pretty logger (using pino-pretty)
-- [x] Using database connection as fastify plugin
 
 ## License
 MIT License

@@ -18,7 +18,7 @@ const dropTables = async () => {
         process.exit(0)
 
     } catch (error) {
-        app.log.warn(error)
+        app.log.error(error)
 
         process.exit(1)
     }

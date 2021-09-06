@@ -36,8 +36,7 @@
     "mysql2": "^2.3.0",
     "pino-pretty": "^6.0.0",
     "sequelize": "^6.6.5",
-    "uid-generator": "^2.0.0",
-    "uuid": "^8.3.2"
+    "uid-generator": "^2.0.0"
   },
   "devDependencies": {
     "tap": "^15.0.9"
