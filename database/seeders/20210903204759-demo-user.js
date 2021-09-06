@@ -1,5 +1,5 @@
 'use strict';
-const { encrypt } = require('../../utils/hash')
+const { encrypt } = require('../../app/utils/hash')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
