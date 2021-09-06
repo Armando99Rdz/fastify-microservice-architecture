@@ -15,13 +15,20 @@ const uidgen = new UIDGenerator(256); // Default is a 128-bit UID encoded in bas
 const generateAppSecretKey = async () => {
     try {
 
+        const jsonPath = path.join(config.projectPath, 'config/default.json')
+
+        // TODO: validate if file exists
+        if (! fs.existsSync(jsonPath)) {
+            app.log.error('The config/default.json file does not exists')
+            process.exit(0)
+        }
+
         if (env.get('app.secretKey')) { // validate if exists
             app.log.warn('Secret key has already been generated.')
             process.exit(0) // exit
         }
 
         // Read & update JSON file
-        const jsonPath = path.join(config.projectPath, 'config/default.json')
         let jsonData = JSON.parse(fs.readFileSync(jsonPath).toString())
 
         const key = await uidgen.generate(); // -> 'B1q2hUEKmeVp9zWepx9cnp'
